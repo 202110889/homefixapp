@@ -30,11 +30,13 @@ export default function PermissionScreen() {
       CameraPermissionStatus === "granted" &&
       mediaLibraryPermission?.granted
     ) {
-      router.replace("/(tabs)/camera");
+      router.push("/(tabs)/cameraview");
     } else {
       Alert.alert("권한을 마저 설정해 주세요.");
     }
   };
+  console.log(CameraPermissionStatus);
+  console.log(mediaLibraryPermission);
   return (
     <>
       <Stack.Screen options={{ headerTitle: "Permissions" }} />
@@ -65,9 +67,8 @@ export default function PermissionScreen() {
           <Switch
             trackColor={{ true: "orange" }}
             value={CameraPermissionStatus === "granted"}
-            // @ts-ignore
-            onChange={(event) => {
-              requestCameraPermission();
+            onChange={async () => {
+              await requestCameraPermission();
             }}
           />
         </View>

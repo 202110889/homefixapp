@@ -6,7 +6,7 @@ import { Image, ImageBackground } from "react-native";
 const _Layout = () => {
   return (
     // Bottom Nav bar
-    <Tabs>
+    <Tabs screenOptions={{ lazy: true }}>
       <Tabs.Screen
         name="index"
         options={{
@@ -24,7 +24,7 @@ const _Layout = () => {
         }}
       />
       <Tabs.Screen
-        name="camera"
+        name="cameraview"
         options={{
           title: "Camera",
           headerShown: false,
@@ -40,7 +40,7 @@ const _Layout = () => {
       <Tabs.Screen
         name="permissions"
         options={{
-          tabBarShowLabel: false,
+          title: "Permissions",
           headerShown: false,
         }}
       />
