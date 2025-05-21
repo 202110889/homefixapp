@@ -24,16 +24,9 @@ const _Layout = () => {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="camera"
         options={{
-          title: "Profile",
-          headerShown: false,
-        }}
-      />
-      <Tabs.Screen
-        name="saved"
-        options={{
-          title: "Saved",
+          title: "Camera",
           headerShown: false,
         }}
       />
@@ -41,6 +34,13 @@ const _Layout = () => {
         name="search"
         options={{
           title: "Search",
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="permissions"
+        options={{
+          tabBarShowLabel: false,
           headerShown: false,
         }}
       />

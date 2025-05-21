@@ -12,7 +12,7 @@ const Camera = () => {
   const router = useRouter();
 
   const device = useCameraDevice("back");
-  if (redirectToPermissions) return <Redirect href={"./permissions"} />;
+  if (redirectToPermissions) return <Redirect href="/(tabs)/permissions" />;
   if (!device) return <></>;
   return (
     <View>
@@ -22,3 +22,5 @@ const Camera = () => {
 };
 
 export default Camera;
+
+// 현재 권한설정후 카메라로 링크 시 child 오류
