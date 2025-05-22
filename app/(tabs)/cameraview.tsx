@@ -26,10 +26,10 @@ const CameraView = () => {
       const photo = await camera.current.takePhoto({
         enableShutterSound: true,
       });
-      // router.push({
-      //   // pathname: "/media",
-      //   // params: {media: photo.path, type: 'photo'}
-      // })
+      router.push({
+        pathname: "/media",
+        params: { media: photo.path, type: "photo" },
+      });
     } catch (error) {
       console.log(error);
     }
