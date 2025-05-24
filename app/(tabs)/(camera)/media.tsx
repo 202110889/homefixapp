@@ -6,6 +6,7 @@ import { Image, StyleSheet } from "react-native";
 
 const Media = () => {
   const { media, type } = useLocalSearchParams();
+  console.log(media);
   const router = useRouter();
   return (
     <ThemedView style={styles.container}>
@@ -16,8 +17,11 @@ const Media = () => {
       <CameraButton
         title="사진 사용하기"
         containerStyle={{ alignSelf: "center" }}
-        onPress={async () => {
-          await alert("Work In Progress");
+        onPress={() => {
+          router.push({
+            pathname: "../(search)/",
+            params: { media: media },
+          });
         }}
       />
     </ThemedView>

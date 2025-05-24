@@ -37,7 +37,7 @@ const CameraView = () => {
 
   if (hasPermission === false) {
     console.log("redirecting");
-    return <Redirect href="/(tabs)/permissions" />;
+    return <Redirect href="/(tabs)/(camera)/permissions" />;
   }
 
   if (!device || hasPermission === undefined) {

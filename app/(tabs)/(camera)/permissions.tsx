@@ -30,7 +30,7 @@ export default function PermissionScreen() {
       CameraPermissionStatus === "granted" &&
       mediaLibraryPermission?.granted
     ) {
-      router.push("/(tabs)/cameraview");
+      router.push("/(tabs)/(camera)/cameraview");
     } else {
       Alert.alert("권한을 마저 설정해 주세요.");
     }
